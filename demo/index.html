@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>Slider Demo</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			html, body, div, span, ul {
+			margin:0;padding:0;border:0;font-size:100%;font:inherit;
+			vertical-align: baseline;word-wrap:break-word;}
+			html {width: 100%; height: 100%;}
+			body {width: 100%; min-height: 100%; overflow-x: hidden;
+				padding-bottom: 5%;
+				box-sizing:border-box; background-color:#fff; letter-spacing: -0.5px;}
+			ol, ul, li {list-style: none;}
+			img {border:0;outline: 0;vertical-align:top;}
+			button {
+				border: 1px solid #999;
+				width: 30px;
+				height: 30px;
+			}
+			h1 {
+				padding-top: 5%;
+				text-align: center;
+				font-size: 1.5rem;
+				color: #414141;
+			}
+			h2 {
+				text-align: center;
+				padding-top: 8%;
+				font-size: 1.5rem;
+				color: #414141;
+			}
+			sub {
+				display: block;
+				padding-top: 15%;
+				text-align: center;
+				font-size: 0.7rem;
+				color: #414141;
+			}
+			a.link {
+				display: block;
+				text-align: center;
+				font-size: 1.2rem;
+				color: #414141;
+			}
+			.slider_demo_container {
+				/* display: none; */
+				width: 100%;
+				height: 100%;
+			}
+			.slider_demo_list {
+				width: 100%;
+				height: 100%;
+				vertical-align: middle;
+				background-color: #f1f1f1;
+			}
+			.slider_demo_list > p {
+				display: table-cell;
+				vertical-align: middle;
+				margin: 0;
+				width: 100%;
+				text-align: center;
+				font-family: sans-serif;
+				font-size: 1rem;
+				color: #333;
+				position: absolute;
+				top: 49%;
+			}
+			.container {
+				width: 750px;
+				height: 300px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media only screen and (max-width: 800px) {
+				.container {
+					width: 80% !important;
+				}
+			}
+			@media only screen and (max-width: 414px) {
+				.container {
+					width: 90% !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Modern Slider Plugin </h1>
+		<a class="link" href="https://github.com/leegy0629/ModernSlider" target="_blank">Git Hub</a>
+
+		<h2>Basic</h2>
+		<div class="container">
+			<!-- <div style="position: absolute; top: 0; left: 0; z-index: 100;">
+				<button onclick="testButton1();">1</button>
+				<button onclick="testButton2();">2</button>
+				<button onclick="testButton3();">3</button>
+				<button onclick="testButton4();">4</button>
+				<button onclick="testButton5();">5</button>
+			</div> -->
+			<div id="sliderDemoContainer01" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Bullets</h2>
+		<div class="container">
+			<div id="sliderDemoContainer02" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Arrow</h2>
+		<div class="container">
+			<div id="sliderDemoContainer03" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Infinite</h2>
+		<div class="container">
+			<div id="sliderDemoContainer04" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Auto Play</h2>
+		<div class="container">
+			<div id="sliderDemoContainer05" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Slide To</h2>
+		<div class="container">
+			<div style="position: absolute; top: 0; left: 0; z-index: 100;">
+				<button onclick="testButton1();">1</button>
+				<button onclick="testButton2();">2</button>
+				<button onclick="testButton3();">3</button>
+				<button onclick="testButton4();">4</button>
+				<button onclick="testButton5();">5</button>
+			</div>
+			<div id="sliderDemoContainer06" class="slider_demo_container">
+				<div class="slider_demo_wrap">
+					<div class="slider_demo_list"><p>Slider - 1</p></div>
+					<div class="slider_demo_list"><p>Slider - 2</p></div>
+					<div class="slider_demo_list"><p>Slider - 3</p></div>
+					<div class="slider_demo_list"><p>Slider - 4</p></div>
+					<div class="slider_demo_list"><p>Slider - 5</p></div>
+				</div>
+			</div>
+		</div>
+
+		<sub>© 2018 gayeonlee Corporation All Rights Reserved.</sub>
+		<script type="text/javascript" src="js/modernSlider.js"></script>
+		<script type="text/javascript">
+
+			/*
+				슬라이드를 사용하는경우 다음과같은 마크업구조를 가지고있어야합니다.
+				(ex:
+					<div>
+						<ul>
+							<li></li>
+						</ul>
+					</div>
+				)
+				위와같은 구조에서 최상단에있는 태그의 클래스 또는 아이디를 지정합니다.
+				클래스일경우 (.) 아이디일경우 (#)
+				echoss slider 옵션은 불린으로 표기 합니다 true/false
+
+				*사용가능한 옵션
+				1. 	infinite 				(Boolean)
+				2. 	bullets 				(Boolean)
+				3. 	arrows 					(Boolean)
+				4. 	clickable 				(Boolean)
+				5. 	speed 					(Number)
+				6. 	delay 					(Number)
+				7. 	autoplay				(Boolean)
+				8. 	destroy
+				9. 	sliderChangeStart
+				10. sliderChangeFinish
+				11. slideTo
+				speed / delay 옵션은 숫자로 표기 합니다 (ex: 400) 설정하지않았을경우 기본값 300ms
+				슬라이더를 해제시킬경우, 슬라이더를 지정한 변수.destroy(); (ex: demoModernSlider.destroy();)
+			*/
+			var demoModernSlider01 = new modernSlider('#sliderDemoContainer01', {
+				// infinite: true,
+				// bullets: true,
+				// arrows: true,
+				speed : 300,
+				// clickable: true,
+				// slidesPerView: 1,
+				// autoplay: {
+				// 	delay: 2000,
+				// }
+			});
+            var demoModernSlider02 = new modernSlider('#sliderDemoContainer02', {
+                speed : 300,
+                bullets: true,
+                clickable: true,
+            });
+            var demoModernSlider03 = new modernSlider('#sliderDemoContainer03', {
+                speed : 300,
+                arrows: true,
+                clickable: true,
+                bullets: true
+            });
+
+            var demoModernSlider04 = new modernSlider('#sliderDemoContainer04', {
+                speed : 300,
+                infinite: true,
+                bullets: true,
+                clickable: true,
+            });
+
+            var demoModernSlider05 = new modernSlider('#sliderDemoContainer05', {
+                speed : 300,
+                infinite: true,
+                bullets: true,
+                clickable: true,
+                autoplay: {
+                	delay: 2000,
+                }
+            });
+
+            var demoModernSlider06 = new modernSlider('#sliderDemoContainer06', {
+                speed : 300,
+                infinite: true,
+                bullets: true,
+                clickable: true,
+            });
+
+			// slideTo 사용 예시
+			function testButton1() {
+                demoModernSlider06.slideTo(0)
+			}
+			function testButton2() {
+                demoModernSlider06.slideTo(1)
+			}
+			function testButton3() {
+                demoModernSlider06.slideTo(2)
+			}
+			function testButton4() {
+                demoModernSlider06.slideTo(3)
+			}
+			function testButton5() {
+                demoModernSlider06.slideTo(4)
+			}
+			//
+			// sliderChangeStart , sliderChangeFinish 사용 예시
+			// demoModernSlider.on('sliderChangeStart',function(){
+			// 	console.log('sliderChangeStart')
+			// });
+			// demoModernSlider.on('sliderChangeFinish',function(){
+			// 	console.log('sliderChangeFinish')
+			// });
+
+			// destroy() 사용 예시
+			// demoModernSlider.destroy();
+		</script>
+	</body>
+</html>
