@@ -3,8 +3,6 @@
 - IE10 까지 지원
 - 모바일 터치 슬라이드 지원
 
-<h2>Demo</h2>
-http://dlrkdus0629dot.dothome.co.kr/portfolio/myportfolio/modernSlider/
 <br/>
 <br/>
 <h2>사용방법</h2>
